@@ -1,0 +1,37 @@
+.container1 {
+    padding: 1rem;
+  }
+  
+  .heading {
+    font-size: 1.875rem;
+    margin-bottom: 1rem;
+  }
+  
+  .spinner {
+    display: block;
+  }
+  
+  .confirmation-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #38bdf8;
+    border-radius: 0.75rem;
+    width: 600px;
+    padding: 2rem;
+    margin: 0 auto;
+  }
+  
+  .confirmation-text {
+    font-size: 1.5rem;
+  }
+  
+  .delete-button {
+    padding: 1rem;
+    background-color: #dc2626;
+    color: white;
+    margin-top: 2rem;
+    width: 100%;
+    cursor: pointer;
+  }
+  

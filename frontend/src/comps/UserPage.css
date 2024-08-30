@@ -1,0 +1,29 @@
+.welcome-text {
+    font-size: 1.5rem; 
+    margin-top: 1rem;  
+    margin-bottom: 1rem;
+    color: blue; 
+  }
+  
+  .blog-title {
+    font-size: 1.875rem; 
+    margin-top: 2rem;    
+    margin-bottom: 2rem;
+  }
+  
+  .add-icon {
+    color: #0369a1; 
+    font-size: 2rem; 
+    margin-left: 150px; 
+  }
+  
+  .flex-container {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+  }
+  
+  .page-padding {
+    padding: 1rem; 
+  }
+  

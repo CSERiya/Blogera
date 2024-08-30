@@ -1,0 +1,32 @@
+.container1 {
+    padding: 1rem;
+  }
+  
+  .heading {
+    font-size: 1.875rem;
+    margin-bottom: 1rem;
+  }
+  
+  .spinner {
+    display: block;
+  }
+  
+  .blog-card {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #38bdf8;
+    border-radius: 0.75rem;
+    width: fit-content;
+    padding: 1rem;
+  }
+  
+  .info {
+    margin-bottom: 1rem;
+  }
+  
+  .label {
+    font-size: 1.25rem;
+    margin-right: 1rem;
+    color: #6b7280;
+  }
+  

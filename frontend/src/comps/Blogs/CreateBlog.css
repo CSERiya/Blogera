@@ -1,0 +1,62 @@
+.container1 {
+    padding: 1rem;
+  }
+  
+  .heading {
+    font-size: 1.875rem;
+    margin-bottom: 1rem;
+  }
+  
+  .spinner {
+    display: block;
+  }
+  
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #38bdf8;
+    border-radius: 0.75rem;
+    width: 600px;
+    padding: 1rem;
+    margin: 0 auto;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-label {
+    font-size: 1.25rem;
+    margin-right: 1rem;
+    color: #6b7280;
+  }
+  
+  .required-asterisk {
+    color: #f87171;
+  }
+  
+  .form-input,
+  .form-textarea {
+    border: 2px solid #6b7280;
+    padding: 0.5rem 1rem;
+    width: 100%;
+  }
+  
+  .form-textarea {
+    min-height: 100px;
+    resize: vertical;
+  }
+  
+  .warning-text {
+    color: #6b7280;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+  }
+  
+  .save-button {
+    padding: 0.5rem;
+    background-color: #e0f2fe;
+    margin-top: 2rem;
+    cursor: pointer;
+  }
+  

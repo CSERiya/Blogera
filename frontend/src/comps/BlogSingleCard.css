@@ -1,0 +1,74 @@
+.blog-card {
+    border: 2px solid #6b7280; 
+    border-radius: 0.5rem;    
+    padding: 0.5rem 1rem;      
+    margin: 1rem;             
+    position: relative;        
+    transition: box-shadow 0.3s; 
+  }
+  
+  .blog-card:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .blog-header {
+    display: flex;            
+    justify-content: flex-start;
+    align-items: center;       
+    gap: 0.5rem;               
+  }
+
+  .blog-content{
+    margin-top: 0.25rem;       
+    margin-bottom: 0.25rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .blog-icon {
+    color: #fc8181;           
+    font-size: 1.5rem;        
+  }
+  
+  .blog-title {
+    margin-top: 0.25rem;       
+    margin-bottom: 0.25rem;
+  }
+  
+  .action-container {
+    display: flex;             
+    justify-content: space-between; 
+    align-items: center;       
+    gap: 0.5rem;               
+    margin-top: 1rem;          
+    padding: 1rem;             
+  }
+  
+  .action-icon {
+    font-size: 2rem;           
+    color: #1e40af;           
+    cursor: pointer;           
+    transition: color 0.3s;   
+  }
+  
+  .action-icon:hover {
+    color: black;              
+  }
+  
+  .info-icon {
+    font-size: 1.5rem;         
+    color: #047857;          
+  }
+  
+  .edit-icon {
+    font-size: 1.5rem;        
+    color: #d97706;            
+  }
+  
+  .delete-icon {
+    font-size: 1.5rem;         
+    color: #dc2626;           
+  }
+  
