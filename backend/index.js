@@ -21,11 +21,12 @@ app.use(bodyParser.json());
 app.use(cors());
 app.get('/', (req, res) => {
   res.send('Welcome to the Blog API!');
-});
-
+});  
 app.use('/auth',AuthRouter)
 app.use('/blog',BlogRouter);
 
 app.listen(PORT, () => {
   console.log(`Server is running on ${PORT}`);
 });
+
+ 
