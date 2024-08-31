@@ -27,6 +27,9 @@ app.use(bodyParser.json());
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true,
 }));
+app.get('/', (req, res) => {
+    res.send('Welcome to the Blog API!');
+  });
 app.use('/auth',AuthRouter)
 app.use('/blog',BlogRouter);
 
