@@ -10,7 +10,7 @@ const BlogRouter= require('./Routes/BlogRouter');
 const PORT = process.env.PORT || 8080;
 const db_url=process.env.DB_URL;
 
-mongoose.connect("mongodb+srv://root:Root_3043@emart.rt2yxmf.mongodb.net/Blog-website?retryWrites=true&w=majority&appName=Emart")
+mongoose.connect(db_url)
 .then(()=>{
   console.log("MongoDB Connected Successfully!");
 }).catch((err)=>{
