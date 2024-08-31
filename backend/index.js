@@ -9,7 +9,8 @@ const BlogRouter = require('./Routes/BlogRouter');
 
 const PORT = process.env.PORT || 8080;
 const db_url = process.env.DB_URL;
-
+app.use(express.json());
+app.use(cors());
 mongoose.connect(db_url)
   .then(() => {
     console.log("MongoDB Connected Successfully!");
@@ -17,16 +18,6 @@ mongoose.connect(db_url)
   .catch((err) => {
     console.log("MongoDB Connection Error: ", err);
   });
-app.use(cors({
-  origin: [
-    'http://localhost:3000',
-    'https://blogera-bsi5-k2tmjorks-riya-kumaris-projects-2d0a8c42.vercel.app',
-    'https://blogera-mu.vercel.app',
-    'https://blogera-bsi5.vercel.app'
-  ],
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  credentials: true,
-}));
   app.get('/', (req, res) => {
     res.send('Welcome to the Blog API!');
   });  
