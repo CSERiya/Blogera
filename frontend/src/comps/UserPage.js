@@ -4,32 +4,38 @@ import Spinner from './Spinner';
 import { Link } from 'react-router-dom';
 import { MdOutlineAddBox } from 'react-icons/md';
 import BlogCard from './BlogCard';
-import './UserPage.css';  
+import './UserPage.css';
 
 const UserPage = () => {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(false);
   const [userName, setUserName] = useState('');
+  const [userId, setUserId] = useState('');
 
   useEffect(() => {
     const storedUserName = localStorage.getItem('loggedInUser');
-    if (storedUserName) {
+    const storedUserId = localStorage.getItem('loggedInUserId'); 
+
+    if (storedUserName && storedUserId) {
       setUserName(storedUserName);
+      setUserId(storedUserId);
     } else {
-      console.error('User name not found in localStorage');
+      console.error('User name or ID not found in localStorage');
     }
 
-    setLoading(true);
-    axios
-      .get('http://localhost:8080/blog/add')
-      .then((response) => {
-        setBlogs(response.data.data);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.log(error);
-        setLoading(false);
-      });
+    if (storedUserId) {
+      setLoading(true);
+      axios
+        .get(`http://localhost:8080/blog/blogs/user/${storedUserId}`)  
+        .then((response) => {
+          setBlogs(response.data.data);
+          setLoading(false);
+        })
+        .catch((error) => {
+          console.log(error);
+          setLoading(false);
+        });
+    }
   }, []);
 
   return (
@@ -38,10 +44,10 @@ const UserPage = () => {
       <div className='flex-container'>
         <h2 className='blog-title'>Your Blogs</h2>
         <Link to='/blogs/create'>
-          <MdOutlineAddBox className='add-icon' /> Add Blog
+          <MdOutlineAddBox className='add-icon' /> <span className='add-icon-p'>Add Blog</span>
         </Link>
       </div>
-      {loading ? <Spinner /> : <BlogCard blogs={blogs} />}
+      {loading ? <Spinner /> : blogs.length > 0 ? <BlogCard blogs={blogs} /> : <p>No blogs available.</p>}
     </div>
   );
 };

@@ -26,4 +26,19 @@
   .page-padding {
     padding: 1rem; 
   }
+
+  @media(max-width:425px){
+    .add-icon-p{
+      font-size: small;
+    }
+  }
+  @media(max-width:375px){
+    .add-icon{
+      margin-left: 2px;
+    }
+    .add-icon-p{
+      font-size: small;
+      margin-left: 2px;
+    }
+  }
   

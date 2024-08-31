@@ -14,9 +14,10 @@ const CreateBlog = () => {
   const navigate = useNavigate();
 
   const handleSaveBlog = () => {
+    const bloggerId = localStorage.getItem('loggedInUserId');  
     const data = {
       title,
-      blogger,
+      blogger: bloggerId, 
       ...(content && { content }),
     };
     setLoading(true);
@@ -28,10 +29,11 @@ const CreateBlog = () => {
       })
       .catch((error) => {
         setLoading(false);
-        handleError('Error');
-        console.log(error);
+        console.error('Error response:', error.response);
+        handleError('Error: ' + (error.response?.data?.message || error.message));
       });
   };
+  
 
   return (
     <div className='container1'>

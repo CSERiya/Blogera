@@ -51,7 +51,8 @@ res.status(201)
     success:true,
     jwtToken,
     email,
-    name:user.name
+    name:user.name,
+    userId: user._id
 })
     }catch(err){
         res.status(500)

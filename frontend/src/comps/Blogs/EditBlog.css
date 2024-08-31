@@ -47,4 +47,10 @@
     background-color: #38bdf8;
     margin-top: 2rem;
   }
+
+  @media(max-width:600px){
+    .form-container{
+      width: auto;
+    }
+  }
   

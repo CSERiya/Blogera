@@ -38,7 +38,7 @@ const ShowBlog = () => {
           </div>
           <div className='info'>
             <span className='label'>Blogger:</span>
-            <span>{blog.blogger}</span>
+            <span>{blog.blogger?.name}</span> 
           </div>
           <div className='info'>
             <span className='label'>Content:</span>

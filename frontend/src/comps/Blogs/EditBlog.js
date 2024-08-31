@@ -8,7 +8,8 @@ import './EditBlog.css';
 
 const EditBlog = () => {
   const [title, setTitle] = useState('');
-  const [blogger, setBlogger] = useState('');
+  const [bloggerId, setBloggerId] = useState('');
+  const [bloggerName, setBloggerName] = useState('');
   const [content, setContent] = useState('');
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
@@ -18,7 +19,8 @@ const EditBlog = () => {
     setLoading(true);
     axios.get(`http://localhost:8080/blog/${id}`)
       .then((response) => {
-        setBlogger(response.data.blogger);
+        setBloggerId(response.data.blogger._id); 
+        setBloggerName(response.data.blogger.name); 
         setTitle(response.data.title);
         setContent(response.data.content);
         setLoading(false);
@@ -33,7 +35,7 @@ const EditBlog = () => {
   const handleEditBlog = () => {
     const data = {
       title,
-      blogger,
+      blogger: bloggerId, 
       content,
     };
     setLoading(true);
@@ -68,9 +70,10 @@ const EditBlog = () => {
           <label className='label'>Blogger</label>
           <input
             type='text'
-            value={blogger}
-            onChange={(e) => setBlogger(e.target.value)}
+            value={bloggerName}
+            onChange={(e) => setBloggerName(e.target.value)}
             className='input'
+            disabled
           />
         </div>
         <div className='input-group'>

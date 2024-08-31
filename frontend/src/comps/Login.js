@@ -32,11 +32,12 @@ const Login = () => {
       });
 
       const result = await response.json();
-      const { success, message, error, jwtToken, name } = result;
+      const { success, message, error, jwtToken, name, userId } = result;  
       if (success) {
         handleSuccess(message);
         localStorage.setItem('token', jwtToken);
         localStorage.setItem('loggedInUser', name);
+        localStorage.setItem('loggedInUserId', userId);  
 
         // Dispatch custom event to update Navbar
         window.dispatchEvent(new Event('loginStatusChange'));

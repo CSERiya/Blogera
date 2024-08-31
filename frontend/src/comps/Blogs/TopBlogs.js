@@ -50,9 +50,9 @@ const TopBlogs = () => {
             <div className='blog-header1'>
               <h2 className='blog-title1'>{blog.title}</h2>
             </div>
-
+            
             <div className='blogger1'>
-              <p className='content-text1'>-{blog.blogger}</p>
+              <p className='content-text1'>-{blog.blogger?.name}</p>
             </div>
 
             <div className='blog-content1'>
@@ -79,4 +79,3 @@ const TopBlogs = () => {
 };
 
 export default TopBlogs;
-
