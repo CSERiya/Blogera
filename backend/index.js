@@ -18,7 +18,12 @@ mongoose.connect(db_url)
 })
 
 app.use(bodyParser.json());
-app.use(cors())
+  app.use(cors({
+  origin: 'https://blogera-bsi5-k2tmjorks-riya-kumaris-projects-2d0a8c42.vercel.app', 
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], 
+    credentials: true,
+}
+));
 app.use('/auth',AuthRouter)
 app.use('/blog',BlogRouter);
 
