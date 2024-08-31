@@ -12,7 +12,7 @@ const ShowBlog = () => {
   useEffect(() => {
     setLoading(true);
     if (id) {
-      axios.get(`http://localhost:8080/blog/${id}`)
+      axios.get(`https://blogera-ub1p.vercel.app/blog/${id}`)
       // axios.get(`https://blogera-mu.vercel.app/blog/${id}`)
         .then((response) => {
           setBlog(response.data);
