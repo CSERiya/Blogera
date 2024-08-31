@@ -1,5 +1,6 @@
 
-const jwt= require('jsonwebtoken')
+const jwt= require('jsonwebtoken');
+const JWT_SECRET="secret-123";
 const ensureAuthenticated= (req, res,next)=>{
     const auth=req.headers['authorization'];
     if(!auth){
@@ -7,7 +8,7 @@ const ensureAuthenticated= (req, res,next)=>{
         .json({message: 'Unauthorized, JWT token is required'});
     }
     try{
-const decoded= jwt.verify(auth, process.env.JWT_SECRET);
+const decoded= jwt.verify(auth, JWT_SECRET);
 req.user=decoded;
 next();
     }catch(err){
