@@ -30,3 +30,11 @@
       transform: translateX(0);
     }
   }
+
+  @media(max-width:425px){
+    .mailBtn{
+      font-size: medium;
+      margin-left: 4px;
+      margin-right: 4px;
+    }
+  }

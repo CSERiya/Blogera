@@ -25,20 +25,6 @@ router.post('/add', async (request, response) => {
 });
 
     // Route to getting all the written blogs
-// router.get('/add', async (request, response) => {
-//   try {
-//     const blogs = await BlogModel.find({})
-//       .populate('blogger', 'name'); 
-
-//     return response.status(200).json({
-//       count: blogs.length,
-//       data: blogs
-//     });
-//   } catch (error) {
-//     console.error('Error fetching blogs:', error.message);
-//     response.status(500).send({ message: error.message });
-//   }
-// });
 router.get('/add', async (request, response) => {
   try {
     const blogs = await BlogModel.find({})
