@@ -21,7 +21,8 @@ const CreateBlog = () => {
       ...(content && { content }),
     };
     setLoading(true);
-    axios.post('http://localhost:8080/blog/add', data)
+    // axios.post('http://localhost:8080/blog/add', data)
+    axios.post('https://blogera-mu.vercel.app/blog/add', data)
       .then(() => {
         setLoading(false);
         handleSuccess('Blog created successfully');

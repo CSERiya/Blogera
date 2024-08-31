@@ -13,7 +13,9 @@ const TopBlogs = () => {
   useEffect(() => {
     const fetchTopBlogs = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/blog/add'); 
+        const response =
+        //  await axios.get('http://localhost:8080/blog/add'); 
+       await axios.get('https://blogera-mu.vercel.app/blog/add');
         if (response.data && response.data.data) {  
           setBlogs(response.data.data); 
         } else {

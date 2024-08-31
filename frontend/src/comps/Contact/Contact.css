@@ -13,19 +13,15 @@
   }
   
   .mailBtn {
+    font-size: 2rem;
     text-decoration: none;
     transform: translateX(-100vw);
     animation: mailBtnAnimation 2s forwards;
-  }
-  
-  .mailBtn > button {
-    text-decoration: none;
-    font: 200 2vmax "Roboto";
-    cursor: url("https://img.icons8.com/color/48/000000/edit--v2.png"), pointer;
-    padding: 2vmax;
+    padding: 4px;
+
   }
 
-  .mailBtn > button:hover {
+  .mailBtn:hover {
     color: #eb4034;
   }
   
