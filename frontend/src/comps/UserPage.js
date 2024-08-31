@@ -36,7 +36,7 @@ const UserPage = () => {
           setLoading(false);
         });
     }
-  }, []);
+  }, []);    
 
   return (
     <div className='page-padding'>
