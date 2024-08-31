@@ -7,7 +7,7 @@ const mongoose= require('mongoose');
 const AuthRouter = require('./Routes/AuthRouter');
 const BlogRouter= require('./Routes/BlogRouter');
 
-const PORT = process.env.PORT || 8080;
+const PORT = 8080;
 
 mongoose.connect(db_url)
 .then(()=>{
@@ -17,7 +17,10 @@ mongoose.connect(db_url)
 })
 
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors({
+  origin: "https://blogera-6bgf.vercel.app/", 
+  credentials: true,
+}));
 app.get('/', (req, res) => {
   res.send('Welcome to the Blog API!');
 });  
