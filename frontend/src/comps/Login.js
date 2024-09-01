@@ -22,8 +22,8 @@ const Login = () => {
       return handleError('All fields are mandatory');
     }
     try {
-      const url = "https://blogera-ub1p.vercel.app/auth/login";
-// const url= "https://blogera-mu.vercel.app/auth/login";
+      // const url = "https://blogera-ub1p.vercel.app/auth/login";
+const url= "http://localhost:3000/auth/login";
       const response = await fetch(url, {
         method: "POST",
         headers: {

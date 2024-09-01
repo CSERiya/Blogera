@@ -13,8 +13,8 @@ const DeleteBlog = () => {
 
   const handleDeleteBlog = () => {
     setLoading(true);
-    axios.delete(`https://blogera-ub1p.vercel.app/blog/${id}`)
-    // axios.delete(`https://blogera-mu.vercel.app/blog/${id}`)
+    // axios.delete(`https://blogera-ub1p.vercel.app/blog/${id}`)
+    axios.delete(`http://localhost:3000/blog/${id}`)
       .then(() => {
         setLoading(false);
         handleSuccess('Blog deleted successfully');

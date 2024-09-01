@@ -7,9 +7,9 @@ const mongoose= require('mongoose');
 const AuthRouter = require('./Routes/AuthRouter');
 const BlogRouter= require('./Routes/BlogRouter');
 
-const PORT = process.env.PORT || 8080;
+const PORT =8080;
 
-mongoose.connect(db_url)
+mongoose.connect("mongodb+srv://root:Root_3043@emart.rt2yxmf.mongodb.net/Blog-website?retryWrites=true&w=majority&appName=Emart")
 .then(()=>{
   console.log("MongoDB Connected Successfully!");
 }).catch((err)=>{
@@ -28,4 +28,4 @@ app.listen(PORT, () => {
   console.log(`Server is running on ${PORT}`);
 });
 
- 
+module.exports = app;
