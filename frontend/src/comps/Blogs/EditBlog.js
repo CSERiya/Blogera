@@ -17,8 +17,8 @@ const EditBlog = () => {
 
   useEffect(() => {
     setLoading(true);
-    // axios.get(`https://blogera-ub1p.vercel.app/blog/${id}`)
-    axios.get(`http://localhost:3000/blog/${id}`)
+    axios.get(`https://blogera-im9g.vercel.app/blog/${id}`)
+    // axios.get(`http://localhost:3000/blog/${id}`)
       .then((response) => {
         setBloggerId(response.data.blogger._id); 
         setBloggerName(response.data.blogger.name); 
@@ -40,8 +40,8 @@ const EditBlog = () => {
       content,
     };
     setLoading(true);
-    // axios.put(`https://blogera-ub1p.vercel.app/blog/${id}`, data)
-    axios.put(`http://localhost:3000/blog/${id}`,data)
+    axios.put(`https://blogera-im9g.vercel.app/blog/${id}`, data)
+    // axios.put(`http://localhost:3000/blog/${id}`,data)
       .then(() => {
         setLoading(false);
         handleSuccess('Blog Edited Successfully');
