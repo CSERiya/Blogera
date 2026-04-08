@@ -25,7 +25,7 @@ const UserPage = () => {
 
     if (storedUserId) {
       setLoading(true);
-      axios.get(`https://blogera-im9g.vercel.app/blog/blogs/user/${storedUserId}`)  
+      axios.get(`http://ec2-13-126-65-134.ap-south-1.compute.amazonaws.com:8080/blog/blogs/user/${storedUserId}`)  
       // axios.get(`http://localhost:3000/blog/blogs/user/${storedUserId}`)
         .then((response) => {
           setBlogs(response.data.data);
