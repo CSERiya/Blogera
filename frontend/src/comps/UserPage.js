@@ -21,7 +21,7 @@ const UserPage = () => {
       setUserId(storedUserId);
     } else {
       console.error('User name or ID not found in localStorage');
-      console.log(userId);
+      //console.log(userId);
     }
 
     if (storedUserId) {
@@ -37,7 +37,7 @@ const UserPage = () => {
           setLoading(false);
         });
     }
-  }, []);    
+  }, [userId]);    
 
   return (
     <div className='page-padding'>
