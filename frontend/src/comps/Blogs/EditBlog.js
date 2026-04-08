@@ -17,7 +17,7 @@ const EditBlog = () => {
 
   useEffect(() => {
     setLoading(true);
-    axios.get(`https://blogera-im9g.vercel.app/blog/${id}`)
+    axios.get(`http://ec2-13-126-65-134.ap-south-1.compute.amazonaws.com:8080/blog/${id}`)
     // axios.get(`http://localhost:3000/blog/${id}`)
       .then((response) => {
         setBloggerId(response.data.blogger._id); 
@@ -40,7 +40,7 @@ const EditBlog = () => {
       content,
     };
     setLoading(true);
-    axios.put(`https://blogera-im9g.vercel.app/blog/${id}`, data)
+    axios.put(`http://ec2-13-126-65-134.ap-south-1.compute.amazonaws.com:8080/blog/${id}`, data)
     // axios.put(`http://localhost:3000/blog/${id}`,data)
       .then(() => {
         setLoading(false);
