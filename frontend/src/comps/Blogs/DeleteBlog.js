@@ -13,7 +13,7 @@ const DeleteBlog = () => {
 
   const handleDeleteBlog = () => {
     setLoading(true);
-    axios.delete(`https://blogera-im9g.vercel.app/blog/${id}`)
+    axios.delete(`http://ec2-13-126-65-134.ap-south-1.compute.amazonaws.com:8080/blog/${id}`)
     // axios.delete(`http://localhost:3000/blog/${id}`)
       .then(() => {
         setLoading(false);
