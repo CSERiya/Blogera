@@ -21,6 +21,7 @@ const UserPage = () => {
       setUserId(storedUserId);
     } else {
       console.error('User name or ID not found in localStorage');
+      console.log(userId);
     }
 
     if (storedUserId) {
