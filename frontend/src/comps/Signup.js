@@ -24,7 +24,7 @@ if(!name || !email || !password){
     return handleError('All fields are mandatory')
 }
 try{
-const url="https://blogera-im9g.vercel.app/auth/signup";
+const url="http://ec2-13-126-65-134.ap-south-1.compute.amazonaws.com:8080/auth/signup";
 // const url="http://localhost:3000/auth/signup";
 const response= await fetch(url,{
 method:"POST",
