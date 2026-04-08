@@ -21,7 +21,7 @@ const CreateBlog = () => {
       ...(content && { content }),
     };
     setLoading(true);
-    axios.post('https://blogera-im9g.vercel.app/blog/add', data)
+    axios.post('http://ec2-13-126-65-134.ap-south-1.compute.amazonaws.com:8080/blog/add', data)
     //  axios.post('http://localhost:3000/blog/add', data)
       .then(() => {
         setLoading(false);
