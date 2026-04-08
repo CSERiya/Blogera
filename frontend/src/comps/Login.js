@@ -22,7 +22,7 @@ const Login = () => {
       return handleError('All fields are mandatory');
     }
     try {
-      const url = "https://blogera-im9g.vercel.app/auth/login";
+      const url = "http://ec2-13-126-65-134.ap-south-1.compute.amazonaws.com:8080/auth/login";
 // const url= "http://localhost:3000/auth/login";
       const response = await fetch(url, {
         method: "POST",
