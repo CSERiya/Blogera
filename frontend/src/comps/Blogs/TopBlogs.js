@@ -14,7 +14,7 @@ const TopBlogs = () => {
     const fetchTopBlogs = async () => {
       try {
         const response =
-         await axios.get('https://blogera-im9g.vercel.app/blog/add'); 
+         await axios.get('http://ec2-13-126-65-134.ap-south-1.compute.amazonaws.com:8080/blog/add'); 
       //  await axios.get('http://localhost:3000/blog/add');
         if (response.data && response.data.data) {  
           setBlogs(response.data.data); 
